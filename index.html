@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Portal</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('./assests/ffof.jpg'); /* Path to your background image */
+        background-size: cover; /* Cover the entire background */
+        background-position: center; /* Center the background image */
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 10px;
+            width: 100%;
+            padding: 20px 30px;
+            border-bottom: 1px solid white;
+            background-color: transparent; /* Initial background color */
+            transition: background-color 0.3s, backdrop-filter 0.3s; /* Transition for background color and blur */
+        }
+
+        .navbar.blur {
+            backdrop-filter: blur(100px); /* Blur effect */
+            background-color: #ffffff05; /* Dark Purple with transparency */
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        .navbar .login-btn {
+            padding: 5px 15px;
+            border: 1px solid white;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 20px;
+        }
+
+        section {
+        width: 45%;
+        margin: 20px 0;
+        background: transparent;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .card {
+        background: linear-gradient(45deg, #4b0082, #800080);
+        color: white;
+        padding: 20px;
+        margin: 10px 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transition: transform 0.2s, box-shadow 0.2s;
+        cursor: pointer;
+        }
+
+        .card img {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        }
+
+        .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+        text-align: center;
+        color: #4b0082;
+        }
+
+        h3 {
+        margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+        section {
+            width: 100%;
+        }
+        }
+
+    </style>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <div class="logo">Logo</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Scenarios</a>
+            <a href="#">Library</a>
+        </nav>
+        <a href="#" class="login-btn">Login</a>
+    </div>
+    <div>
+    <div class="container">
+        <section id="ethics">
+            <h2>Ethics and Moral Education</h2>
+            <div class="card" onclick="window.location.href='../Ethics/ethics_and_moral.html'">
+                <img src="./assests/girl.avif" alt="Ethics Image 1">
+                <h3>Card Title 1</h3>
+                <p>Content for the first card in Ethics and Moral Education section.Content for the second card in Ethics and Moral Education section.</p>
+            </div>
+        </section>
+        <section id="human-rights">
+            <h2>Human Rights</h2>
+            <div class="card" onclick="window.location.href='../HR/human_rights.html'">
+                <img src="./assests/boy.jpg" alt="Human Rights Image 1">
+                <h3>Card Title 2</h3>
+                <p>Content for the second card in Human Rights section. Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi id error iusto fugit.</p>
+            </div>
+        </section>
+    </div>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta similique incidunt deserunt doloremque est, eveniet recusandae sed eos natus hic, autem amet corporis a magnam, magni quo laborum dolorum. Ut illum autem aspernatur tempore vero magnam ab, asperiores, totam adipisci quidem consequatur nam ducimus quia recusandae animi officia eum esse vel, blanditiis id. Perspiciatis tempora repellendus et nulla exercitationem eos, pariatur laudantium ipsa voluptas! Vero atque eum cupiditate repudiandae vel exercitationem tempora aspernatur rerum necessitatibus repellat? Quisquam eligendi voluptatum reiciendis iste corrupti quibusdam natus eveniet iusto vel necessitatibus quia sed repellat, atque veniam mollitia expedita aperiam laboriosam, quo rem saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quos unde error tempore mollitia dolorem neque voluptas quam at laborum? Dolores a praesentium quas vitae dolorem consequuntur corrupti illum ratione vel odio, quasi sunt exercitationem reiciendis dolore placeat harum est pariatur aliquid. Nostrum natus reprehenderit aliquid molestiae soluta, eum suscipit nisi voluptatum, amet ipsum perspiciatis laboriosam. Minus, quasi modi officia possimus iste nulla laboriosam quidem pariatur fugit suscipit molestias dicta totam quo, voluptatum impedit culpa tempore architecto ab voluptas dolorum odit. Maxime modi culpa quaerat placeat ad non nesciunt facilis, error velit quia dolores rerum, dolorum delectus nulla quae quasi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea aspernatur itaque omnis, reiciendis ad rerum qui praesentium accusantium a, molestias at maxime, porro facilis impedit cupiditate inventore eligendi voluptatem? Fugit error sit recusandae sunt corporis aut repellendus adipisci perspiciatis dolorem! Modi expedita maxime doloremque qui consequuntur hic optio? Commodi illo nihil dolorem voluptas! Laborum cum ut ea animi, inventore magni dicta sunt, officia nihil minima nesciunt saepe laudantium, doloribus aperiam voluptatum magnam fugiat! Corporis perferendis blanditiis iste facere amet repellendus, quibusdam modi ratione in animi esse sapiente aperiam magni nobis iusto aut officia similique ullam magnam itaque possimus suscipit beatae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate ut corporis recusandae, fuga libero provident aperiam, voluptate nihil accusamus ullam quod, impedit perspiciatis doloribus nesciunt. Aspernatur quos velit ratione? Debitis labore cum eligendi architecto ducimus, nulla expedita neque sed id recusandae alias unde laborum adipisci. Vero molestias autem rem modi fuga. Laborum facilis expedita beatae alias vitae dolor, cumque, dignissimos, illo ab repellat dolores magnam voluptas debitis? Unde repellendus consectetur dolorem provident voluptatum temporibus quas nobis ipsum corrupti, itaque a molestiae dicta iste mollitia numquam laudantium, quod ea ullam voluptates. Facilis nihil, nulla totam nostrum omnis quidem exercitationem. Placeat quasi dolorum nemo nostrum pariatur fugit, ullam tempore magnam totam cum iure voluptatum dignissimos quo vitae, dolore eum. Repellendus, corrupti? Quaerat, nam? Maxime, ducimus autem. Doloribus labore, quod eveniet sed provident iste voluptates voluptas repellendus ullam distinctio, expedita voluptatibus dolorum quas vitae, voluptatem nobis harum dolor voluptate. Eos officiis non vel, corporis quis eius? Facere blanditiis adipisci voluptates sed veniam quas, nostrum, rem animi assumenda ullam quasi quia modi eius tempora minus provident. Rerum voluptates, non, rem, adipisci distinctio magnam necessitatibus explicabo quidem obcaecati voluptatum expedita quisquam sed consequuntur provident beatae velit hic! Pariatur qui iusto omnis ea rem. Dolor, sunt!  </div>
+
+    </div>
+     <script src="script.js"></script>
+</body>
+</html>

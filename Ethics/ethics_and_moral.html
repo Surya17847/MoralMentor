@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scenario Quiz</title>
+
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        body {
+            background-image: url(../assests/ipc.webp);
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-image: url(../assests/purple.avif);
+            background-size: cover;
+            background-position: center;
+            padding: 20px 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            border-radius: 3rem;
+            text-align: start;
+            position: relative;
+        }
+
+        .quit {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #420EC0;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .quit:hover {
+            background-color: #170B3f;
+        }
+
+        .timer {
+            background-color: #33a1fd;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .timer.red {
+            background-color: red;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .scenario {
+            background-image: url(../assests/centric.jpg);
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 80px;
+            height: 150px;
+            overflow-y: auto;
+            transition: height 0.5s ease;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+
+        .option {
+            background-color: #e0aaff;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            width: fit-content;
+        }
+
+        .option:hover {
+            background-color: #d090ff;
+            transform: scale(1.05);
+        }
+
+        .feedback {
+            margin-top: 20px;
+            background-color: #d8eae0;
+            padding: 10px;
+            border-radius: 10px;
+            display: none;
+        }
+
+
+
+.selected {
+    background-color: #e0aaff;
+}
+
+.option {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.feedback {
+    margin-top: 10px;
+    padding: 10px;
+    display: none;
+}
+
+.question-feedback {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.navigation {
+    margin-top: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+        .navigation {
+            margin-top: 20px;
+        }
+
+        .navigation button {
+            background-color: #420EC0;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .navigation button:hover {
+            background-color: #170B3f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="quit" onclick="goHome()">Quit</button>
+        <div class="timer" id="timer">30s</div>
+        <div class="scenario" id="scenario">Scenario text goes here...</div>
+        <div class="options" id="options">
+            <button class="option" id="option1" onclick="selectOption(1)">Option 1</button>
+            <button class="option" id="option2" onclick="selectOption(2)">Option 2</button>
+            <button class="option" id="option3" onclick="selectOption(3)">Option 3</button>
+            <button class="option" id="option4" onclick="selectOption(4)">Option 4</button>
+        </div>
+        <div class="feedback" id="feedback"></div>
+        <div class="navigation">
+            <button id="prev" onclick="prevQuestion()">Previous</button>
+            <button id="next" onclick="nextQuestion()">Next</button>
+        </div>
+    </div>
+    <script src="scenario.js"></script>
+    
+</body>
+</html>

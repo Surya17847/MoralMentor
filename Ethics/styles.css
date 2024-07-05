@@ -1,0 +1,123 @@
+body {
+  background-color: #f0e4ff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #f7dcff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  text-align: center;
+  position: relative;
+}
+
+.quit {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #420EC0;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quit:hover {
+  background-color: #170B3f;
+}
+
+.timer {
+  background-color: #33a1fd;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.timer.red {
+  background-color: red;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.scenario {
+  background-color: #420EC0;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 80px;
+  height: 300px;
+  overflow-y: auto;
+  transition: height 0.5s ease;
+}
+
+.options {
+  display: none;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.option {
+  background-color: #e0aaff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: fit-content;
+  align-self: center;
+}
+
+.option:hover {
+  background-color: #d090ff;
+  transform: scale(1.05);
+}
+
+.feedback {
+  margin-top: 20px;
+  background-color: #33fd8e;
+  padding: 10px;
+  border-radius: 10px;
+  display: none;
+}
+
+.navigation {
+  margin-top: 20px;
+}
+
+.navigation button {
+  background-color: #420EC0;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navigation button:hover {
+  background-color: #170B3f;
+}
